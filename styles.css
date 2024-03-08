@@ -24,6 +24,7 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background-color: whitesmoke;
 }
 .logo{
     position: relative;
@@ -77,17 +78,27 @@ body{
     align-items: center;
     padding: 70px 10% 0;
 }
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(5px);
+}
+
 .home-content{
-    /* margin-top: 10px;
-    margin-bottom: 20px;
-    color: #840858; */
+    position: relative;
     max-width: 600px;
 }
 .home-content h3{
     font-size: 30px;
     font-weight: 700;
-    /* color:rgb(144, 9, 76); */
-    color:orange;
+    color:rgb(144, 9, 76);
+    /* color:orange; */
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: .7s;
