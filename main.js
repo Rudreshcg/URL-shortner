@@ -6,9 +6,3 @@ var typed = new Typed(".text", {
     loop: true
 });
 
-
-function toggleNavbar() {
-    var navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
-}
-
