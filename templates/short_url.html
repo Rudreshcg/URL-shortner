@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Short URL</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
 <body>
-    <h1>Original URL:</h1>
-    <p>{{ original_url }}</p>
-    <h1>Generated Results:</h1>
-    <p><a href="{{ url_for('redirect_to_original_url', short_url=short_url) }}">{{ short_url }}</a></p>
+    <div class="container">
+        <h1 class="mt-2 mb-3">Original URL:</h1>
+        <p class="lead text-info">{{ original_url }}</p>
+        <h2 class="mt-3 mb-4">Generated Results:<span class="small font-italic text-primary"> http://127.0.0.1:5000/{{ short_url }}/redirect</span></h2>
+        <p class="mb-5">
+            <a href="{{ url_for('redirect_to_original_url', short_url=short_url) }}" class="mr-5 btn btn-primary btn-lg">
+                Visit Short URL
+            </a>
+            <a class="p-5" href="/"><button class="btn btn-danger btn-lg ml-2">Back</button></a>
+        </p>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
